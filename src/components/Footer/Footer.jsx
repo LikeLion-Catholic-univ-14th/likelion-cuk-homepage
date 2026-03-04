@@ -9,8 +9,8 @@ const Footer = () => {
       </div>
       <nav className={styles.nav}>
         <span onClick={() => window.open('https://www.instagram.com/likelion_cuk/', '_blank')}>Instagram</span>
-        <span onClick={() => window.open('')}>Github</span>
-        <span onClick={() => window.open('')}>문의하기</span>
+        <span onClick={() => window.open('https://github.com/LikeLion-Catholic-univ-14th')}>Github</span>
+        <span onClick={() => window.open('https://open.kakao.com/o/sDPjC5di')}>문의하기</span>
       </nav>
     </footer>
   );
