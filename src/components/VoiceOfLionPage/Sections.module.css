@@ -22,10 +22,11 @@
 .section2 {
   padding-left: 64px;
   padding-right: 64px;
-  margin-bottom: 40px;
+  padding-bottom: 16px;
+
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .topRow {
@@ -71,15 +72,14 @@
 }
 
 .quoteBox {
-  width: 100%;
-  height: 100%;
-  min-height: 54px;
-  padding: 12px 21px;
+  max-height: 95px;
+  padding: 12px 28px;
   border-radius: 10px;
   border-left: 2.67px solid #e0e0e0;
   background-color: #f8f8f8;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  overflow-y: auto;
 }
 
 .quote {
@@ -97,8 +97,8 @@
 }
 
 .box {
-  padding: 24px 28px;
-  min-height: 112px;
+  padding: 24px 32px;
+  max-height: 160px;
   border-radius: 10px;
   background-color: #f8f8f8;
 
@@ -111,16 +111,26 @@
 .boxTitle {
   font-weight: 700;
   font-style: Bold;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 20px;
   color: #1a1a1a;
 }
 
+.boxName {
+  font-weight: 600;
+  font-style: Bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+}
+
 .boxDes {
+  max-height: 160px;
   font-weight: 400;
   font-size: 14px;
   line-height: 21.13px;
   color: #777777;
+  overflow-y: auto;
 }
 
 .engTitle {
@@ -149,6 +159,11 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
   .boxContainer {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -163,6 +178,7 @@
 
   .section2 {
     padding-left: 0;
+    padding-right: 0;
   }
 
   .korTitle {

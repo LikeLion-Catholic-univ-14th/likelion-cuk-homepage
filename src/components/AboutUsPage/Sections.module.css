@@ -47,7 +47,7 @@
   display: grid;
   grid-template-columns: 64px 1fr;
   gap: 18px;
-  border-left: 2px solid #E0E0E0;
+  border-left: 2px solid #e0e0e0;
   padding-left: 26px;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .box {
-  height: 124.5px;
+  height: 150px;
   gap: 8px;
   border-radius: 10px;
   background-color: #f8f8f8;
@@ -79,7 +79,7 @@
 
 .num {
   font-weight: 700;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 16.5px;
   text-align: center;
   color: #bbbbbb;
@@ -94,7 +94,7 @@
 }
 
 .boxDes {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   text-align: center;
   color: #999999;
@@ -102,13 +102,22 @@
 
 .boxContainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
   .boxContainer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box {
+    height: 120px;
   }
 
   .section {
@@ -121,5 +130,17 @@
 
   .description {
     font-size: 14px;
+  }
+
+  .num {
+    font-size: 11px;
+  }
+
+  .boxTitle {
+    font-size: 14px;
+  }
+
+  .boxDes {
+    font-size: 12px;
   }
 }
