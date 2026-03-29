@@ -15,11 +15,11 @@ const Hero = () => {
     >
       <p className={styles.schoolName}>LIKELION CUK UNIV.</p>
       <span className={styles.title}>
-        당신의 상상,
+        당신의 상상
         <br />
         세상 밖으로
       </span>
-      <p className={styles.description}>문구문구문구문구</p>
+      <p className={styles.description}>POSSIBILITY TO REALITY</p>
     </motion.div>
   );
 };

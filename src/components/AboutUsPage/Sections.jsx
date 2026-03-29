@@ -39,21 +39,22 @@ const Sections = () => {
         <span className={styles.engTitle}>HISTORY</span>
         <span className={styles.korTitle}>연혁</span>
         <div className={styles.historyContainer}>
+          <span className={styles.year}>2026</span>
+          <span className={styles.historyDes}>
+            14기 · 멋사 가대 홈페이지 제작
+          </span>
           <span className={styles.year}>2025</span>
           <span className={styles.historyDes}>
-            14기 활동 시작 · 누적 멤버 500명 돌파
+            13기 · CUK 창업 아이디어 경진대회 최우수상, 컴퓨터정보공학부 학술제
+            대상 수상
           </span>
           <span className={styles.year}>2024</span>
           <span className={styles.historyDes}>
-            13기 · 해커톤 대상 수상 · 동아리 연합 행사 주최
+            12기 · 아우름제 소개 페이지 제작, 네이버 클라우드 제휴
           </span>
           <span className={styles.year}>2023</span>
           <span className={styles.historyDes}>
-            12기 · 프로젝트 10개 런칭 · 기업 협업 시작
-          </span>
-          <span className={styles.year}>2022</span>
-          <span className={styles.historyDes}>
-            11기 · 정식 동아리 등록 · 첫 데모데이 개최
+            11기 · 멋쟁이사자처럼 가톨릭대학교 출범, 아우름제 소개 페이지 제작
           </span>
         </div>
       </motion.div>
@@ -71,24 +72,24 @@ const Sections = () => {
         <span className={styles.korTitle}>연간 활동 흐름</span>
         <div className={styles.boxContainer}>
           <div className={styles.box}>
-            <span className={styles.num}>01</span>
-            <span className={styles.boxTitle}>모집</span>
-            <span className={styles.boxDes}>서류 · 면접</span>
+            <span className={styles.num}>1학기</span>
+            <span className={styles.boxTitle}>3~6월</span>
+            <span className={styles.boxDes}>
+              14기 OT, 교육 세션, <br />
+              교내/중앙 아이디어톤
+            </span>
           </div>
           <div className={styles.box}>
-            <span className={styles.num}>02</span>
-            <span className={styles.boxTitle}>교육</span>
-            <span className={styles.boxDes}>트랙 · 공통 세션</span>
+            <span className={styles.num}>여름방학</span>
+            <span className={styles.boxTitle}>7~8월</span>
+            <span className={styles.boxDes}>교내/중앙 해커톤</span>
           </div>
           <div className={styles.box}>
-            <span className={styles.num}>03</span>
-            <span className={styles.boxTitle}>프로젝트</span>
-            <span className={styles.boxDes}>팀 빌딩 · 개발</span>
-          </div>
-          <div className={styles.box}>
-            <span className={styles.num}>04</span>
-            <span className={styles.boxTitle}>수료</span>
-            <span className={styles.boxDes}>데모데이 · 수료식</span>
+            <span className={styles.num}>2학기</span>
+            <span className={styles.boxTitle}>9~12월</span>
+            <span className={styles.boxDes}>
+              MT, 연합/기업 해커톤, <br /> 교내 학술제, 수료식
+            </span>
           </div>
         </div>
       </motion.div>

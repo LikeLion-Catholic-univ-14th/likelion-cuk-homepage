@@ -6,13 +6,13 @@ const CardsData = [
   {
     id: "01",
     title: "About Us",
-    description: "동아리의 미션, 연혁, 조직 구조를 소개합니다.",
+    description: "동아리의 목표, 연혁, 연간 활동 흐름을 소개합니다.",
     path: "/aboutus",
   },
   {
     id: "02",
     title: "Activities",
-    description: "트랙 세션, 공동 세션, 연사 특강 등 연간 활동을 확인하세요.",
+    description: "트랙 세션, 공통 세션, 연사 특강 등 연간 활동을 확인하세요.",
   },
   {
     id: "03",
