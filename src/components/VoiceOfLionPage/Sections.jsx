@@ -1,13 +1,32 @@
 import styles from "./Sections.module.css";
+import { motion } from "framer-motion";
 
 const Sections = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.section}>
+      <motion.div
+        className={styles.section}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <span className={styles.engTitle}>ALUMNI INTERVIEWS</span>
         <span className={styles.korTitle}>졸업생이 전하는 이야기</span>
-      </div>
-      <div className={styles.section2}>
+      </motion.div>
+      <motion.div
+        className={styles.section2}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <div className={styles.topRow}>
           <div className={styles.profileImg}></div>
           <div className={styles.nameJob}>
@@ -22,8 +41,17 @@ const Sections = () => {
             면접에서 큰 도움이 됐어요."
           </span>
         </div>
-      </div>
-      <div className={styles.section2}>
+      </motion.div>
+      <motion.div
+        className={styles.section2}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <div className={styles.topRow}>
           <div className={styles.profileImg}></div>
           <div className={styles.nameJob}>
@@ -38,8 +66,42 @@ const Sections = () => {
             면접에서 큰 도움이 됐어요."
           </span>
         </div>
-      </div>
-      <div className={styles.section}>
+      </motion.div>
+      <motion.div
+        className={styles.section2}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
+        <div className={styles.topRow}>
+          <div className={styles.profileImg}></div>
+          <div className={styles.nameJob}>
+            <span className={styles.name}>홍길동</span>
+            <span className={styles.job}>풀스택 개발자</span>
+          </div>
+        </div>
+        <div className={styles.quoteBox}>
+          <span className={styles.quote}>
+            "멋사에서 처음 코딩을 배웠어요. 비전공자였지만 체계적인 커리큘럼과
+            함께한 팀원들 덕분에 성장할 수 있었습니다. 특히 프로젝트 경험이 취업
+            면접에서 큰 도움이 됐어요."
+          </span>
+        </div>
+      </motion.div>
+      <motion.div
+        className={styles.section}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <span className={styles.engTitle}>ACTIVITY REVIEWS</span>
         <span className={styles.korTitle}>활동 후기</span>
         <div className={styles.boxContainer}>
@@ -72,7 +134,7 @@ const Sections = () => {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

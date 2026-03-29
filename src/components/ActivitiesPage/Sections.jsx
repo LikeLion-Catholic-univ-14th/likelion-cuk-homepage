@@ -1,22 +1,50 @@
 import styles from "./Sections.module.css";
+import { motion } from "framer-motion";
 
 const Sections = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.titleSection}>
+      <motion.div
+        className={styles.titleSection}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <span className={styles.engTitle}>ACTIVITIES</span>
         <span className={styles.korTitle}>우리의 활동</span>
         <span className={styles.description}>
           한 학기 동안 이런 활동들을 합니다.
         </span>
-      </div>
+      </motion.div>
 
-      <div className={styles.mobileImageSlider}>
+      <motion.div
+        className={styles.mobileImageSlider}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <span>모바일용 이미지 슬라이더 자리</span>
-      </div>
+      </motion.div>
 
       <div className={styles.sectionContainer}>
-        <div className={styles.section}>
+        <motion.div
+          className={styles.section}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            y: { duration: 0.7 },
+          }}
+        >
           <span className={styles.num}>01</span>
           <span className={styles.korTitle}>Track Sessions</span>
           <span className={styles.description}>
@@ -30,13 +58,40 @@ const Sections = () => {
             <li className={styles.list}>트랙별 멘토 배정</li>
             <li className={styles.list}>매주 과제 및 코드 리뷰</li>
           </div>
-        </div>
-        <div className={styles.image}></div>
+        </motion.div>
+        <motion.div
+          className={styles.image}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            y: { duration: 0.7 },
+          }}
+        ></motion.div>
       </div>
 
       <div className={styles.sectionContainer2}>
-        <div className={styles.image}></div>
-        <div className={styles.section}>
+        <motion.div
+          className={styles.image}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            y: { duration: 0.7 },
+          }}
+        ></motion.div>
+        <motion.div
+          className={styles.section}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            y: { duration: 0.7 },
+          }}
+        >
           <span className={styles.num}>02</span>
           <span className={styles.korTitle}>Common Sessions</span>
           <span className={styles.description}>
@@ -50,11 +105,20 @@ const Sections = () => {
             <li className={styles.list}>트랙별 멘토 배정</li>
             <li className={styles.list}>매주 과제 및 코드 리뷰</li>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className={styles.sectionContainer}>
-        <div className={styles.section}>
+        <motion.div
+          className={styles.section}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            y: { duration: 0.7 },
+          }}
+        >
           <span className={styles.num}>03</span>
           <span className={styles.korTitle}>Guest Lectures</span>
           <span className={styles.description}>
@@ -67,8 +131,17 @@ const Sections = () => {
             <li className={styles.list}>항목2</li>
             <li className={styles.list}>항목3</li>
           </div>
-        </div>
-        <div className={styles.image}></div>
+        </motion.div>
+        <motion.div
+          className={styles.image}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.5,
+            y: { duration: 0.7 },
+          }}
+        ></motion.div>
       </div>
     </div>
   );

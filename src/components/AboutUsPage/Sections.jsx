@@ -1,9 +1,19 @@
 import styles from "./Sections.module.css";
+import { motion } from "framer-motion";
 
 const Sections = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.section}>
+      <motion.div
+        className={styles.section}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <span className={styles.engTitle}>INTRODUCE</span>
         <span className={styles.korTitle}>멋쟁이사자처럼 가톨릭대학교</span>
         <span className={styles.description}>
@@ -15,18 +25,48 @@ const Sections = () => {
           <br />한 학기 동안의 교육과 프로젝트를 통해 실질적인 개발 역량을
           키우고, 함께 성장하는 경험을 제공합니다.
         </span>
-      </div>
-      <div className={styles.section}>
+      </motion.div>
+      <motion.div
+        className={styles.section}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <span className={styles.engTitle}>HISTORY</span>
         <span className={styles.korTitle}>연혁</span>
         <div className={styles.historyContainer}>
-          <span className={styles.year}>2025</span><span className={styles.historyDes}>14기 활동 시작 · 누적 멤버 500명 돌파</span>
-          <span className={styles.year}>2024</span><span className={styles.historyDes}>13기 · 해커톤 대상 수상 · 동아리 연합 행사 주최</span>
-          <span className={styles.year}>2023</span><span className={styles.historyDes}>12기 · 프로젝트 10개 런칭 · 기업 협업 시작</span>
-          <span className={styles.year}>2022</span><span className={styles.historyDes}>11기 · 정식 동아리 등록 · 첫 데모데이 개최</span>
+          <span className={styles.year}>2025</span>
+          <span className={styles.historyDes}>
+            14기 활동 시작 · 누적 멤버 500명 돌파
+          </span>
+          <span className={styles.year}>2024</span>
+          <span className={styles.historyDes}>
+            13기 · 해커톤 대상 수상 · 동아리 연합 행사 주최
+          </span>
+          <span className={styles.year}>2023</span>
+          <span className={styles.historyDes}>
+            12기 · 프로젝트 10개 런칭 · 기업 협업 시작
+          </span>
+          <span className={styles.year}>2022</span>
+          <span className={styles.historyDes}>
+            11기 · 정식 동아리 등록 · 첫 데모데이 개최
+          </span>
         </div>
-      </div>
-      <div className={styles.section}>
+      </motion.div>
+      <motion.div
+        className={styles.section}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
         <span className={styles.engTitle}>STRUCTURE</span>
         <span className={styles.korTitle}>연간 활동 흐름</span>
         <div className={styles.boxContainer}>
@@ -51,7 +91,7 @@ const Sections = () => {
             <span className={styles.boxDes}>데모데이 · 수료식</span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
