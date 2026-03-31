@@ -13,16 +13,19 @@ const CardsData = [
     id: "02",
     title: "Activities",
     description: "트랙 세션, 공통 세션, 연사 특강 등 연간 활동을 확인하세요.",
+    path: "/activities",
   },
   {
     id: "03",
     title: "Projects",
     description: "기수별 팀 프로젝트의 성과물을 둘러보세요.",
+    path: "/projects",
   },
   {
     id: "04",
     title: "Voice of Lion",
     description: "졸업생 인터뷰와 활동 후기를 읽어보세요.",
+    path: "/voiceoflion",
   },
 ];
 
