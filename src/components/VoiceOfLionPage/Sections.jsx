@@ -1,5 +1,6 @@
 import styles from "./Sections.module.css";
 import { motion } from "framer-motion";
+import profileImg_kms from "../../assets/voiceoflion_김민석님.jpg";
 
 const Sections = () => {
   return (
@@ -28,7 +29,9 @@ const Sections = () => {
         }}
       >
         <div className={styles.topRow}>
-          <div className={styles.profileImg}></div>
+          <div className={styles.profileImgContainer}>
+            <span className={styles.profileImgText}>김</span>
+          </div>
           <div className={styles.nameJob}>
             <span className={styles.name}>김동현 | 11기 프론트엔드</span>
             <span className={styles.job}>Product Operation</span>
@@ -43,6 +46,43 @@ const Sections = () => {
             도와 취업도 하는 등 제 인생에 있어서 좋은 영향만 주었던 것 같습니다.
             배움을 통해서 얻는 것도 크겠지만 여기서 만난 인연들을 통해서 내
             인생의 새 챕터를 열어가시길 진심으로 기원합니다!"
+          </span>
+        </div>
+      </motion.div>
+      <motion.div
+        className={styles.section2}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.5,
+          y: { duration: 0.7 },
+        }}
+      >
+        <div className={styles.topRow}>
+          <div className={styles.profileImgContainer}>
+            <img
+              src={profileImg_kms}
+              alt="김민석님"
+              className={styles.profileImg}
+            />
+          </div>
+          <div className={styles.nameJob}>
+            <span className={styles.name}>김민석 | 11기 백엔드</span>
+            <span className={styles.job}>소프트웨어 개발자</span>
+          </div>
+        </div>
+        <div className={styles.quoteBox}>
+          <span className={styles.quote}>
+            "당시에 제가 부족한 점이 많았지만 함께 열심히 따라와준 부원들이
+            생각납니다. 멋사에서 많은 인연들을 만들었고, 단순 프로젝트 경험뿐만
+            아니라 창업 동아리까지 이어지는 활동을 할 수 있었습니다. 요즘은 AI를
+            활용하면 많은 것을 혼자 할 수 있지만, 그럼에도 함께 동기부여하면서
+            프로젝트를 만드는 것이 더 큰 보람과 성취로 이어질 수 있다고
+            생각합니다. 특히나 아직 AI를 사용해서 없는 기능을 만들어내는 것은
+            어렵기 때문에, 기술적인 측면에서 아이디어가 돋보이는 프로젝트를
+            경험하면 좋을 것 같습니다. 후배님들도 저처럼 멋사 활동을 통해서 많은
+            인연을 만드시고 좋은 경험을 가져가셨으면 좋겠습니다."
           </span>
         </div>
       </motion.div>
