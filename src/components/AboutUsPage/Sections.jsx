@@ -1,19 +1,10 @@
 import styles from "./Sections.module.css";
-import { motion } from "framer-motion";
+import FadeUp from "../FadeUp";
 
 const Sections = () => {
   return (
     <div className={styles.container}>
-      <motion.div
-        className={styles.section}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
+      <FadeUp className={styles.section}>
         <span className={styles.engTitle}>INTRODUCE</span>
         <span className={styles.korTitle}>멋쟁이사자처럼 가톨릭대학교</span>
         <span className={styles.description}>
@@ -25,17 +16,8 @@ const Sections = () => {
           <br />한 학기 동안의 교육과 프로젝트를 통해 실질적인 개발 역량을
           키우고, 함께 성장하는 경험을 제공합니다.
         </span>
-      </motion.div>
-      <motion.div
-        className={styles.section}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
+      </FadeUp>
+      <FadeUp className={styles.section}>
         <span className={styles.engTitle}>HISTORY</span>
         <span className={styles.korTitle}>연혁</span>
         <div className={styles.historyContainer}>
@@ -57,17 +39,8 @@ const Sections = () => {
             11기 · 멋쟁이사자처럼 가톨릭대학교 출범, 아우름제 소개 페이지 제작
           </span>
         </div>
-      </motion.div>
-      <motion.div
-        className={styles.section}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
+      </FadeUp>
+      <FadeUp className={styles.section}>
         <span className={styles.engTitle}>STRUCTURE</span>
         <span className={styles.korTitle}>연간 활동 흐름</span>
         <div className={styles.boxContainer}>
@@ -92,7 +65,7 @@ const Sections = () => {
             </span>
           </div>
         </div>
-      </motion.div>
+      </FadeUp>
     </div>
   );
 };

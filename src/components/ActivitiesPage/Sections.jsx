@@ -1,50 +1,74 @@
 import styles from "./Sections.module.css";
-import { motion } from "framer-motion";
+import FadeUp from "../FadeUp";
+import { useState, useEffect } from "react";
+import img_FE from "../../assets/tracksession_FE.jpeg";
+import img_BE from "../../assets/tracksession_BE.jpg";
+import img_Design from "../../assets/tracksession_Design.jpg";
+import img_Plan from "../../assets/tracksession_Plan.jpg";
+import commonImg_1 from "../../assets/commonsession_1.jpg";
+import commonImg_2 from "../../assets/commonsession_2.jpg";
+import commonImg_3 from "../../assets/commonsession_3.jpg";
+import commonImg_4 from "../../assets/commonsession_4.jpg";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Sections = () => {
+  const [trackIndex, setTrackIndex] = useState(0);
+  const [commonIndex, setCommonIndex] = useState(0);
+  const [mobileIndex, setMobileIndex] = useState(0);
+  const trackSessionImages = [img_FE, img_BE, img_Plan, img_Design];
+  const commonSessionImages = [
+    commonImg_1,
+    commonImg_2,
+    commonImg_3,
+    commonImg_4,
+  ];
+  const mobileSliderImages = [
+    img_FE,
+    img_BE,
+    img_Plan,
+    img_Design,
+    commonImg_1,
+    commonImg_2,
+    commonImg_3,
+    commonImg_4,
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTrackIndex((prev) => (prev + 1) % trackSessionImages.length);
+      setCommonIndex((prev) => (prev + 1) % commonSessionImages.length);
+      setMobileIndex((prev) => (prev + 1) % mobileSliderImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className={styles.container}>
-      <motion.div
-        className={styles.titleSection}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
+      <FadeUp className={styles.titleSection}>
         <span className={styles.engTitle}>ACTIVITIES</span>
         <span className={styles.korTitle}>우리의 활동</span>
         <span className={styles.description}>
           1년 동안 이런 활동들을 합니다.
         </span>
-      </motion.div>
+      </FadeUp>
 
-      <motion.div
-        className={styles.mobileImageSlider}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
-        <span>모바일용 이미지 슬라이더 자리</span>
-      </motion.div>
+      <FadeUp className={styles.mobileImageSlider}>
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={mobileIndex}
+            src={mobileSliderImages[mobileIndex]}
+            alt="Track Session"
+            className={styles.mobileImage}
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -50, opacity: 0 }}
+            transition={{ duration: 0.6 }}
+          />
+        </AnimatePresence>
+      </FadeUp>
 
       <div className={styles.sectionContainer}>
-        <motion.div
-          className={styles.section}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            y: { duration: 0.7 },
-          }}
-        >
+        <FadeUp className={styles.section}>
           <span className={styles.num}>01</span>
           <span className={styles.korTitle}>Track Sessions</span>
           <span className={styles.description}>
@@ -58,40 +82,39 @@ const Sections = () => {
             <li className={styles.list}>트랙별 멘토 배정</li>
             <li className={styles.list}>매주 과제 및 코드 리뷰</li>
           </div>
-        </motion.div>
-        <motion.div
-          className={styles.image}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            y: { duration: 0.7 },
-          }}
-        ></motion.div>
+        </FadeUp>
+        <FadeUp className={styles.imageContainer}>
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={trackIndex}
+              src={trackSessionImages[trackIndex]}
+              alt="Track Session"
+              className={styles.image}
+              initial={{ x: 50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -50, opacity: 0 }}
+              transition={{ duration: 0.6 }}
+            />
+          </AnimatePresence>
+        </FadeUp>
       </div>
 
       <div className={styles.sectionContainer2}>
-        <motion.div
-          className={styles.image}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            y: { duration: 0.7 },
-          }}
-        ></motion.div>
-        <motion.div
-          className={styles.section}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            y: { duration: 0.7 },
-          }}
-        >
+        <FadeUp className={styles.imageContainer}>
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={commonIndex}
+              src={commonSessionImages[commonIndex]}
+              alt="Track Session"
+              className={styles.image}
+              initial={{ x: 50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -50, opacity: 0 }}
+              transition={{ duration: 0.6 }}
+            />
+          </AnimatePresence>
+        </FadeUp>
+        <FadeUp className={styles.section}>
           <span className={styles.num}>02</span>
           <span className={styles.korTitle}>Common Sessions</span>
           <span className={styles.description}>
@@ -105,20 +128,11 @@ const Sections = () => {
             <li className={styles.list}>운영진 주도의 공통 주제 학습</li>
             <li className={styles.list}>협업을 위한 필수 역량 강화</li>
           </div>
-        </motion.div>
+        </FadeUp>
       </div>
 
       <div className={styles.sectionContainer}>
-        <motion.div
-          className={styles.section}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            y: { duration: 0.7 },
-          }}
-        >
+        <FadeUp className={styles.section}>
           <span className={styles.num}>03</span>
           <span className={styles.korTitle}>Alumni Networking</span>
           <span className={styles.description}>
@@ -131,17 +145,10 @@ const Sections = () => {
             <li className={styles.list}>기수 간 자유로운 네트워킹</li>
             <li className={styles.list}>진로 및 개발 고민 이야기</li>
           </div>
-        </motion.div>
-        <motion.div
-          className={styles.image}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            y: { duration: 0.7 },
-          }}
-        ></motion.div>
+        </FadeUp>
+        <FadeUp className={styles.imageContainer}>
+          {/* 추후 추가 예정 */}
+        </FadeUp>
       </div>
     </div>
   );

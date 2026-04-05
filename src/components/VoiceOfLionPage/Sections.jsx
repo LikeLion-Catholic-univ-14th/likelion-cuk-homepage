@@ -1,33 +1,15 @@
 import styles from "./Sections.module.css";
-import { motion } from "framer-motion";
+import FadeUp from "../FadeUp";
 import profileImg_kms from "../../assets/voiceoflion_김민석님.jpg";
 
 const Sections = () => {
   return (
     <div className={styles.container}>
-      <motion.div
-        className={styles.section}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
+      <FadeUp className={styles.section}>
         <span className={styles.engTitle}>ALUMNI INTERVIEWS</span>
         <span className={styles.korTitle}>졸업생이 전하는 이야기</span>
-      </motion.div>
-      <motion.div
-        className={styles.section2}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
+      </FadeUp>
+      <FadeUp className={styles.section2}>
         <div className={styles.topRow}>
           <div className={styles.profileImgContainer}>
             <span className={styles.profileImgText}>김</span>
@@ -48,17 +30,8 @@ const Sections = () => {
             인생의 새 챕터를 열어가시길 진심으로 기원합니다!"
           </span>
         </div>
-      </motion.div>
-      <motion.div
-        className={styles.section2}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
+      </FadeUp>
+      <FadeUp className={styles.section2}>
         <div className={styles.topRow}>
           <div className={styles.profileImgContainer}>
             <img
@@ -85,17 +58,8 @@ const Sections = () => {
             인연을 만드시고 좋은 경험을 가져가셨으면 좋겠습니다."
           </span>
         </div>
-      </motion.div>
-      <motion.div
-        className={styles.section}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 1.5,
-          y: { duration: 0.7 },
-        }}
-      >
+      </FadeUp>
+      <FadeUp className={styles.section}>
         <span className={styles.engTitle}>ACTIVITY REVIEWS</span>
         <span className={styles.korTitle}>활동 후기</span>
         <div className={styles.boxContainer}>
@@ -151,7 +115,7 @@ const Sections = () => {
             </span>
           </div>
         </div>
-      </motion.div>
+      </FadeUp>
     </div>
   );
 };

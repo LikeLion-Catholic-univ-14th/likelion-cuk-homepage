@@ -1,6 +1,6 @@
 import styles from "./Cards.module.css";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import FadeUp from "../FadeUp";
 
 const CardsData = [
   {
@@ -34,23 +34,16 @@ const Cards = () => {
   return (
     <div className={styles.container}>
       {CardsData.map((card) => (
-        <motion.div
+        <FadeUp
           key={card.id}
           className={styles.card}
           onClick={() => navigate(card.path)}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.5,
-            y: { duration: 0.7 },
-          }}
         >
           <span className={styles.number}>{card.id}</span>
           <span className={styles.title}>{card.title}</span>
           <span className={styles.description}>{card.description}</span>
           <span className={styles.arrow}>→</span>
-        </motion.div>
+        </FadeUp>
       ))}
     </div>
   );
