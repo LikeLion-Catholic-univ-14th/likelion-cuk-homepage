@@ -7,7 +7,7 @@ import img_Design from "../../assets/tracksession_Design.jpg";
 import img_Plan from "../../assets/tracksession_Plan.jpg";
 import commonImg_1 from "../../assets/commonsession_1.jpg";
 import commonImg_2 from "../../assets/commonsession_2.jpg";
-import commonImg_3 from "../../assets/commonsession_3.jpg";
+import commonImg_3 from "../../assets/commonsession_3.JPG";
 import commonImg_4 from "../../assets/commonsession_4.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
