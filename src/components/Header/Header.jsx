@@ -1,12 +1,35 @@
+import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logoImage from "../../assets/가대멋사로고.svg";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const isMainPage = location.pathname === "/";
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (!isMainPage) {
+      setIsScrolled(false);
+      return;
+    }
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isMainPage]);
+
+  const headerClassName = `${styles.header} ${isMainPage && !isScrolled ? styles.mainHeader : ""}`;
+
   return (
-    <header className={styles.header}>
-      <div className={styles.logoContainer} onClick = {() => navigate("/")}>
+    <header className={headerClassName}>
+      <div className={styles.logoContainer} onClick={() => navigate("/")}>
         <img className={styles.logo} src={logoImage} alt="logo" />
         <span className={styles.name}>LIKELION CUK</span>
       </div>
