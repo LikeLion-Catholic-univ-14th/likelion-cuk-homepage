@@ -75,7 +75,7 @@ const Sections = () => {
             기획, 디자인, 프론트엔드, 백엔드 트랙별로 진행되는 스터디
             세션입니다.
             <br />
-            매주 실습 과제를 통해 실질적인 개발 역량을 키웁니다.
+            매주 부여되는 실습 과제를 통해 실질적인 개발 역량을 키웁니다.
           </span>
           <div className={styles.listContainer}>
             <li className={styles.list}>주 1회 오프라인 세션</li>
@@ -131,7 +131,7 @@ const Sections = () => {
         </FadeUp>
       </div>
 
-      <div className={styles.sectionContainer}>
+      <div className={styles.sectionContainer3}>
         <FadeUp className={styles.section}>
           <span className={styles.num}>03</span>
           <span className={styles.korTitle}>Alumni Networking</span>
@@ -146,9 +146,9 @@ const Sections = () => {
             <li className={styles.list}>진로 및 개발 고민 이야기</li>
           </div>
         </FadeUp>
-        <FadeUp className={styles.imageContainer}>
-          {/* 추후 추가 예정 */}
-        </FadeUp>
+        {/* <FadeUp className={styles.imageContainer}>
+          이미지 추가 예정, sectionContainer3도 임시
+        </FadeUp> */}
       </div>
     </div>
   );

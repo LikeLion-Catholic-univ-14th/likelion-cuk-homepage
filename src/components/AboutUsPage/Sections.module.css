@@ -10,9 +10,7 @@
 
 .section {
   border-bottom: 0.67px solid #f0f0f0;
-  padding-left: 64px;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding: 48px 100px;
 
   display: flex;
   flex-direction: column;
@@ -121,7 +119,7 @@
   }
 
   .section {
-    padding-left: 0;
+    padding: 48px 0;
   }
 
   .korTitle {
