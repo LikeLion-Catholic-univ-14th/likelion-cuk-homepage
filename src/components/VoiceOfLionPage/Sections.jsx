@@ -5,7 +5,7 @@ import profileImg_kms from "../../assets/voiceoflion_김민석님.jpg";
 const Sections = () => {
   return (
     <div className={styles.container}>
-      <FadeUp className={styles.section}>
+      <FadeUp className={styles.section3}>
         <span className={styles.engTitle}>ALUMNI INTERVIEWS</span>
         <span className={styles.korTitle}>졸업생이 전하는 이야기</span>
       </FadeUp>

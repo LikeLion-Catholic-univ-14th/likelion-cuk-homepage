@@ -17,9 +17,20 @@
 }
 
 .section2 {
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 36px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section3 {
+  padding-top: 48px;
   padding-bottom: 16px;
+  padding-left: 100px;
+  padding-right: 100px;
 
   display: flex;
   flex-direction: column;
@@ -195,6 +206,11 @@
   }
 
   .section2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section3 {
     padding-left: 0;
     padding-right: 0;
   }
