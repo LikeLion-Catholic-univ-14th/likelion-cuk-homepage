@@ -1,0 +1,195 @@
+.wrapper {
+  width: 100%;
+}
+
+.orgRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ceoBox {
+  background-color: #111;
+  color: #fff;
+  border-radius: 10px;
+  padding: 16px 16px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.ceoTitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.ceoName {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.connectorV {
+  width: 1px;
+  height: 28px;
+  background-color: #ddd;
+}
+
+.teamsRow {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.teamCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.teamBox {
+  border-radius: 10px;
+  padding: 16px 10px;
+  text-align: center;
+  min-width: 90px;
+  background-color: #F0F0F0;
+}
+
+.teamName {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #111;
+}
+
+.memberName {
+  font-size: 12px;
+  color: #888;
+}
+
+.partSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.partBox {
+  border-radius: 10px;
+  padding: 16px 10px;
+  background-color: #F0F0F0;
+  text-align: center;
+  min-width: 90px;
+}
+
+.partName {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: #111;
+}
+
+.partMember {
+  font-size: 12px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .teamsRow {
+    gap: 8px;
+  }
+
+  .teamCol {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .teamBox {
+    padding: 12px 6px;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .teamName {
+    font-size: 12px;
+  }
+
+  .memberName {
+    font-size: 11px;
+  }
+
+  .ceoBox {
+    padding: 12px;
+    min-width: 80px;
+  }
+
+  .ceoTitle {
+    font-size: 13px;
+  }
+
+  .partBox {
+    padding: 12px 6px;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .partName {
+    font-size: 12px;
+  }
+
+  .partMember {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamsRow {
+    gap: 5px;
+  }
+
+  .teamBox {
+    padding: 10px 4px;
+    border-radius: 8px;
+  }
+
+  .teamName {
+    font-size: 11px;
+  }
+
+  .memberName {
+    font-size: 10px;
+  }
+
+  .ceoBox {
+    padding: 10px;
+    min-width: 68px;
+    border-radius: 8px;
+  }
+
+  .ceoTitle {
+    font-size: 12px;
+  }
+
+  .ceoName {
+    font-size: 10px;
+  }
+
+  .partBox {
+    padding: 10px 4px;
+    border-radius: 8px;
+  }
+
+  .partName {
+    font-size: 11px;
+  }
+
+  .partMember {
+    font-size: 10px;
+  }
+}

@@ -17,6 +17,10 @@
   gap: 12px;
 }
 
+.noBorder {
+  border-bottom: none;
+}
+
 .engTitle {
   font-weight: 700;
   font-size: 11px;

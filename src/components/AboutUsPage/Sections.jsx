@@ -1,5 +1,6 @@
 import styles from "./Sections.module.css";
 import FadeUp from "../FadeUp";
+import { DefaultOrgChart, PartOrgChart } from "./OrgChart";
 
 const Sections = () => {
   return (
@@ -64,6 +65,17 @@ const Sections = () => {
               MT, 연합/기업 해커톤, <br /> 교내 학술제, 수료식
             </span>
           </div>
+        </div>
+      </FadeUp>
+      <FadeUp>
+        <div className={`${styles.section} ${styles.noBorder}`}>
+          <span className={styles.engTitle}>ORGANIZATION</span>
+          <span className={styles.korTitle}>조직도</span>
+          <DefaultOrgChart />
+        </div>
+        <div className={styles.section}>
+          <span className={styles.korTitle}>파트별 조직도</span>
+          <PartOrgChart />
         </div>
       </FadeUp>
     </div>
