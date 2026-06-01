@@ -1,15 +1,33 @@
 .hero {
-  background-image: url("../../assets/hero.JPG");
-  background-size: cover;
-  background-position: center;
+  position: relative;
   text-align: center;
   height: 100vh;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.bgImage.active {
+  opacity: 1;
+}
+
+.bgImage:nth-child(1) {
+  transform: scaleX(-1);
 }
 
 .heroWrapper {
   position: relative;
   height: 100%;
   background-color: rgba(45, 45, 45, 0.5);
+  z-index: 1;
 }
 
 .textContainer {
@@ -24,7 +42,6 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   font-size: 11px;
   font-weight: 700;
-  font-style: Bold;
   letter-spacing: 1.1px;
 }
 
@@ -32,7 +49,6 @@
   color: #fff;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   font-weight: 700;
-  font-style: Bold;
   font-size: 70px;
   line-height: 75px;
   letter-spacing: -1.3px;
@@ -45,7 +61,6 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 0px;
   text-align: center;
 }
 
